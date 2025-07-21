@@ -24,10 +24,10 @@ def get_transcript():
         # Get the transcript list
         transcript_list = YouTubeTranscriptApi.get_transcript(
             video_id,
-            proxies={
-                     "http": "http://170.130.202.134:8080",
-                        "https": "http://170.130.202.134:8080"
-            }
+                proxies={
+        "http": "http://37.187.74.125:80",
+        "https": "http://37.187.74.125:80"
+    }
         )
         # Combine all 'text' fields into a single string
         full_transcript = " ".join([entry["text"] for entry in transcript_list])
